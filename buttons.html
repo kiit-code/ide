@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Page</title>
+    <!-- Load Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body,
+        .bg-light {
+            background-color: #f8f9fa !important;
+            color: #343a40;
+        }
+
+        #sidebar {
+            /* height: 100vh; */
+            
+            background-color: #497398;
+            color: #f8f9fa;
+        }
+
+        #content {
+            height: 70vh;
+        }
+
+        .form-control {
+            background-color: #ffffff;
+            color: #343a40;
+        }
+
+        .btn-primary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        .header {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-btn {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .sidebar-btn:hover {
+            background-color: #989eb8;
+            border-color: #6c757d;
+        }
+
+        .view100height {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header text-center">
+        <h1>KIIT-IDE</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="sidebar" class="col-md-2 view100height">
+                <div class="d-flex flex-column align-items-start justify-content-start h-100">
+                    <button class="btn btn-light sidebar-btn" onclick="updateHeader('Question 1')">Question 1</button>
+                    <button class="btn btn-light sidebar-btn" onclick="updateHeader('Question 2')">Question 2</button>
+                    <button class="btn btn-light sidebar-btn" onclick="updateHeader('Question 3')">Question 3</button>
+                    <button class="btn btn-light sidebar-btn" onclick="updateHeader('Question 4')">Question 4</button>
+                    <button class="btn btn-light sidebar-btn" onclick="updateHeader('Question 5')">Question 5</button>
+
+                    <div class="d-flex flex-column align-items-start justify-content-end h-100"">
+                    <p>Name: Aniruddha Mukherjee</p>
+                    <p>Email: 2205533@kiit.ac.in</p>
+                    <p>Roll: 2205533</p>
+                    <p>Course ID: CS10001</p>
+                </div>
+                </div>
+            </div>
+
+            <div class=" col-md-10">
+                        <!-- your code... -->
+                        <div class="view100height">
+                            <div class="form-group">
+                                <h1 for="question" id="headerTitle">Question:</h1>
+                                <p id="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+                                    odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Lorem ipsum dolor,
+                                    sit amet consectetur adipisicing elit. Ducimus similique perferendis, provident
+                                    praesentium cum accusantium repellendus natus atque voluptatem nostrum quibusdam, et
+                                    dolorum adipisci non vero fuga ex animi nihil. Lorem ipsum dolor sit, amet
+                                    consectetur adipisicing elit. Nam, iure. Optio dignissimos, odio dolorem sequi
+                                    provident quos! Quaerat pariatur molestias voluptates incidunt laboriosam, maiores
+                                    harum a culpa blanditiis dicta vitae?</p>
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                    <label for="language">Choose your programming language:</label>
+                                    <select id="language" class="form-control w-30">
+                                        <option>JavaScript</option>
+                                        <option>Python</option>
+                                        <option>Java</option>
+                                        <!-- More options... -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="content">Write your code here:</label>
+                                    <textarea id="content" class="form-control" rows="10"
+onpaste="return false;"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JavaScript function to update the header -->
+            <script>
+                function updateHeader(text) {
+                    document.getElementById('headerTitle').innerText = text;
+                }
+            </script>
+
+            <!-- Load Bootstrap JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
